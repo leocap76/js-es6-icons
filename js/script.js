@@ -8,6 +8,10 @@
 // è meglio chiudere una sola milestone bene,
 // piuttosto che farle tutte e 3 ma lasciandosi alle spalle delle cose non corrette.
 
+
+$(document).ready(function(){
+
+
 const icons = [
       {
         name: "dog",
@@ -106,3 +110,47 @@ const icons = [
         family: "fas"
       },
     ];
+
+const colors = [
+  "lime";
+  "coral";
+  "dodgerblue"
+];
+
+const container = $("icons");
+
+print(icons, container);
+});
+
+
+//funzioni
+//__________________________
+function(print, container){
+  container.html('');
+
+  array.forEach((element, index) => {
+
+    const {name,prefix,family} = element;
+
+    container.append('
+    <div>
+      <i classe=" ${family} ${prefix} ${name}"></i>
+      <div class="title"> ${name.toUpperCase()} </div>
+    </div>
+    ');
+  });
+
+};
+
+//__________________________
+
+function getTypes(array){
+
+  const types = [];
+
+array.forEach((element) => {
+  types.push(element.type);
+});
+
+  return types;
+}
